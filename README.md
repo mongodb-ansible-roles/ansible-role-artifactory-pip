@@ -16,7 +16,8 @@ Role Variables
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-------:|:--------:|
-| name | desc | type | default | required |
+| `artifactory_base_url` | URL of Artifactory instance | string | "" | true |
+| `artifactory_user` | User whose pip instance needs to be configured to use Artifactory | string | root | true |
 
 Dependencies
 ------------

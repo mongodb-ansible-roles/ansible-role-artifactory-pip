@@ -1,1 +1,3 @@
 ---
+artifactory_base_url: ""
+artifactory_user: root

@@ -8,4 +8,5 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_host(host):
-    assert host.file("/etc/hosts").exists
+    cmd = host.run("pip download --no-cache-dir pip-install-test | sed -n 2p | grep artifactory")  # noqa 501
+    assert cmd.succeeded

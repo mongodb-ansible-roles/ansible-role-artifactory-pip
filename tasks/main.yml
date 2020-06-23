@@ -1,1 +1,24 @@
 ---
+- name: Ensure pip configuration directory exists
+  become: true
+  file:
+    path: "{{ item.path }}"
+    state: directory
+    owner: "{{ item.owner }}"
+  loop:
+    - owner: root
+      path: /root/.pip
+    - owner: "{{ artifactory_user }}"
+      path: "~{{ artifactory_user }}/.pip"
+
+- name: Configure pip to use Artifactory
+  become: true
+  template:
+    src: pip.conf
+    dest: "{{ item.path }}"
+    owner: "{{ item.owner }}"
+  loop:
+    - owner: root
+      path: /root/.pip/pip.conf
+    - owner: "{{ artifactory_user }}"
+      path: "~{{ artifactory_user }}/.pip/pip.conf"
