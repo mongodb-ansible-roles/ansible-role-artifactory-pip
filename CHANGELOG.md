@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mongodb-ansible-roles/ansible-role-artifactory-pip/compare/v1.0.0...v1.1.0) (2020-09-09)
+
+
+### Features
+
+* Allow Artifactory credentials ([#2](https://github.com/mongodb-ansible-roles/ansible-role-artifactory-pip/issues/2)) ([9e664b6](https://github.com/mongodb-ansible-roles/ansible-role-artifactory-pip/commit/9e664b6eaee1660055f8a26425246b9ef51c6202))
+
 # 1.0.0 (2020-06-23)
 
 
