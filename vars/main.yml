@@ -1,1 +1,2 @@
 ---
+artifactory_url: "{{ artifactory_base_url | urlsplit('scheme') }}://{% if artifactory_password != '' %}{{ artifactory_username  }}:{{  artifactory_password }}@{% else %}{% endif %}{{ artifactory_base_url | urlsplit('hostname') }}"
